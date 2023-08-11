@@ -1,0 +1,52 @@
+<%- include("header.ejs") %>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+
+    <body class="bg-dark text-white">
+        <nav class="bg-black text-white text-center">
+            <h2 class="py-2">Nick's List</h2>
+        </nav>
+        <article class="p-2 h-100">
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-header display-6">To-Do <span class="text-info-emphasis">(work)</span>
+                            </div>
+                            <div class="card-body bg-dark-subtle">
+                                <ul class="list-unstyled">
+                                    <% if (locals.workList) { %>
+
+                                        <% for( let i=0; i < workList.length; i++ ) { %>
+                                            <div class="py-2 border-bottom border-dark-subtle">
+                                                <li>
+                                                    <%= workList[i] %>
+                                                </li>
+                                            </div>
+                                            <% } %>
+                                        <% } else {%>
+                                            <div class="py-2 border-bottom border-dark-subtle">
+                                                <li>
+                                                    You have nothing to do today.
+                                                </li>
+                                            </div>
+                                        <% } %>
+                                </ul>
+                                <form action="/workSubmit" method="post" class="d-flex flex-column">
+                                    <input type="text" name="task" id="" class="border-0 rounded-1" placeholder="Type here...">
+                                    <input type="submit" value="Add task" class="py-2 text-dark-emphasis border-0 bg-dark-subtle text-decoration-underline">
+                                </form>
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center">
+                            <form action="/" method="get">
+                                <input type="submit" value="Switch page" class="btn btn-dark">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </body>
+
+    <%- include("footer.ejs") %>
