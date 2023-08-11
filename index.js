@@ -15,11 +15,10 @@ let workList = [];
 
 app.use(morgan("combined", {stream: visitorLogStream}));
 app.use(bodyParser.urlencoded({extended:true}));
-
+app.use(express.static("public"))
 // function (params) {
     
 // }
-
 app.get("/", (req, res)=>{
     res.render("index.ejs");
 })
