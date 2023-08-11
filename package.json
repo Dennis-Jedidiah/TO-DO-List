@@ -1,0 +1,18 @@
+{
+  "name": "to-do-list",
+  "version": "1.0.0",
+  "description": "A simple to-do list app built with Express, Bootstrap and EJS",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Jedidiah Dennis",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1"
+  }
+}
