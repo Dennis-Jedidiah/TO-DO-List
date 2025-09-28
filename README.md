@@ -4,7 +4,7 @@ TO-DO-List
 
 Just a simple To-Do list app. Built with Bootstrap, EJS, and Express.
 
-It is also hosted on [Vercel](to-do-list-7r1l.vercel.app)
+It is also hosted on [Vercel](https://to-do-list-7r1l.vercel.app)
 -------------------------
 
 Installation instructions
