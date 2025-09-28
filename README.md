@@ -2,6 +2,9 @@ TO-DO-List
 ==========
 Just a simple To-Do list app. Built with Bootstrap, EJS, and Express.
 
+It is also hosted on Github Pages 
+-------------------------
+
 Installation instructions
 -------------------------
 
