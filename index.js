@@ -1,4 +1,5 @@
 import express from "express";
+import ejs from "ejs";
 import bodyParser from "body-parser";
 import morgan from "morgan";
 import {dirname} from 'path';
