@@ -2,9 +2,8 @@ import express from "express";
 import ejs from "ejs";
 import bodyParser from "body-parser";
 import morgan from "morgan";
-import { dirname } from "path";
+import { dirname, join } from "path";  // Add join here
 import { fileURLToPath } from "url";
-import fs from "fs";
 
 const app = express();
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -21,11 +20,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.render("index", { personalList: personalList }); // Remove .ejs extension
+  res.render("index", { personalList: personalList });
 });
 
 app.get("/work", (req, res) => {
-  res.render("work", { workList: workList }); // Remove .ejs extension
+  res.render("work", { workList: workList });
 });
 
 app.post("/workSubmit", (req, res) => {
