@@ -7,6 +7,8 @@ Installation instructions
 
 -**run npm install**
 
+-**run npm install express**
+
 -**run nodemon index.js**
 
 -**go to localhost:3000/**
